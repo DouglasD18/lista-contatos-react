@@ -13,7 +13,7 @@ export const getContacts = async (): Promise<Contact[] | undefined> => {
   }
 };
 
-export const getContactById = async (id: string): Promise<Contact | undefined> => {
+export const getContactById = async (id: number): Promise<Contact | undefined> => {
   try {
     const response = await fetch(`${urlBase}/${id}`);
     const data = await response.json();
@@ -39,7 +39,7 @@ export const createContact = async (contact: Contact): Promise<Contact | undefin
   }
 }
 
-export const deleteContact = async (id: string): Promise<Contact | undefined> => {
+export const deleteContact = async (id: number): Promise<Contact | undefined> => {
   try {
     const response = await fetch(`${urlBase}/${id}`, {
       method: "DELETE",
@@ -51,7 +51,7 @@ export const deleteContact = async (id: string): Promise<Contact | undefined> =>
   }
 }
 
-export const updateContact = async (id: string, contact: Contact): Promise<Contact | undefined> => {
+export const updateContact = async (id: number, contact: Contact): Promise<Contact | undefined> => {
   try {
     const response = await fetch(`${urlBase}/${id}`, {
       method: "PUT",

@@ -1,11 +1,21 @@
 * {
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 button {
   display: block;
+  margin: 2px;
 }
 
 form {
   display: block;
+}
+
+tr {
+  text-align: center;
+}
+
+td {
+  text-align: center;
 }
